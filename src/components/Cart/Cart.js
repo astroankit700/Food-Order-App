@@ -56,7 +56,9 @@ const Cart = (props) => {
 
     return (
         <Modal onClose={props.onHideCart}>
-            {!hasItems && <h1>Your cart is empty!</h1>}
+            {!hasItems && (
+                <h3 className={classes.empty}>Your cart is empty!!</h3>
+            )}
             {cartItems}
             <div className={classes.total}>
                 <span>Total Amount</span>
